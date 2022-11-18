@@ -7,13 +7,14 @@ const mongoose = require("./conexion");
 //Configuración
 const app = express();
 const env = process.env;
-const port = env.PORT || 8080;
+const port = env.PORT || '8080';
 
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());
 
 //Arranque
+app.set("Puerto",port)
 app.listen(port, () => {
     console.log("API iniciado en puerto " + port);
 });
