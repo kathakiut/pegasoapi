@@ -7,7 +7,8 @@ const clienteSchema = mongoose.Schema({
     telefono : { type : String, required: true, unique: false },
     correo: { type : String, maxLength: 120, required: true, unique: false },
     usuario: { type : String, maxLength: 20, required: true, unique: true },
-    password: { type : String, maxLength: 100, required: true, unique: false }
+    password: { type : String, maxLength: 100, required: true, unique: false },
+    es_admin: { type:Boolean, maxLength:10, required: true, unique: false }
 });
 
 module.exports = mongoose.model("Clientes", clienteSchema);

@@ -9,7 +9,7 @@ const personalSchema = mongoose.Schema({
     usuario: { type : String, maxLength: 20, required: true, unique: true },
     password: { type : String, maxLength: 200, required: true, unique: false },
     rol: { type : String, maxLength: 80, required: true, unique: false },
-    admin: { type:Boolean, required:false }
+    es_admin: { type:Boolean, maxLength:10, required: true, unique: false }
 });
 
 module.exports = mongoose.model("Personal", personalSchema);
